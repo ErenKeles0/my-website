@@ -10,7 +10,7 @@ function App() {
   const [datas, setdatas] = useState([]);
   async function getdata() {
     try {
-      const response = await fetch('/public/assets/cardtexts.json');
+      const response = await fetch('/assets/cardtexts.json');
       const data = await response.json();
       setdatas(data);
     } catch (error) {
