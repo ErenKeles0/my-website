@@ -1,8 +1,10 @@
-import { useState, useRef } from 'react'
-import './App.css'
+import { useState, useRef } from 'react';
+import './App.css';
 import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 
 function Container(props) {
+
+    const cardsRef = useRef(null);
     const [isHovered, setIsHovered] = useState(false);
     const [isHovered1, setIsHovered1] = useState(false);
     const scrollRef = useRef(null);
@@ -11,56 +13,42 @@ function Container(props) {
         const container = scrollRef.current;
         if (!container) return;
 
-        const start = container.scrollLeft;
-        const distance = direction === 'right' ? window.innerWidth-13 : -window.innerWidth+13;
-        const duration = 500; // ms
-        let startTime = null;
+        const firstCard = container.querySelector('.card-container');
+        if (!firstCard) return;
 
-        const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+        const style = getComputedStyle(firstCard);
+        const cardWidth = firstCard.offsetWidth 
+            + parseFloat(style.marginLeft) 
+            + parseFloat(style.marginRight);
+
+        const distance = direction === 'right' ? cardWidth*2 : -cardWidth*2;
+        const duration = 500;
+        let startTime = null;
+        const start = container.scrollLeft;
+
+        const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 
         const animation = (currentTime) => {
             if (!startTime) startTime = currentTime;
             const elapsed = currentTime - startTime;
             const progress = Math.min(elapsed / duration, 1);
-            const ease = easeOutCubic(progress);
-            container.scrollLeft = start + distance * ease;
-
-            if (progress < 1) {
-                requestAnimationFrame(animation);
-            }
+            container.scrollLeft = start + distance * easeOutCubic(progress);
+            if (progress < 1) requestAnimationFrame(animation);
         };
 
         requestAnimationFrame(animation);
     };
 
     return (
-        <div>
-            <div style={{ 
-                display: "flex", 
-                alignItems: "center",
-                justifyContent: "center"}}>
-                <h1 className="pt-sans-bold" style={{
-                    color:"#8d8573",
-                    textShadow: "1px 1px 4px #8d8573",
-                    fontSize:"36pt"
-                }}>PROJECTS</h1>
+        <div id="cards" ref={cardsRef}>
+            <div className="projects-title-container">
+                <h1 className="pt-sans-bold projects-title">Projects</h1>
             </div>
 
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignItems: 'center',
-                position: 'relative'
-            }}>
+            <div className="projects-wrapper">
                 <div
                     ref={scrollRef}
-                    style={{
-                        flex: '1 1 auto',
-                        display: 'flex',
-                        overflowX: 'hidden', // scroll bar gizlendi
-                        scrollBehavior: 'auto',
-                        padding:"0 0 0 35px"
-                    }}
+                    className="projects-scroll"
                 >
                     {props.children}
                 </div>
@@ -69,20 +57,7 @@ function Container(props) {
                     onClick={() => smoothScroll('right')}
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    style={{
-                        background: '#131515',
-                        borderRadius: 20,
-                        border: '1px solid black',
-                        padding: 20,
-                        flex: '0 0 auto',
-                        position: 'absolute',
-                        right: 30,
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 1,
-                        opacity: isHovered ? 1 : 0.75,
-                        transition: "opacity .25s ease-in-out"
-                    }}
+                    className={`scroll-button right ${isHovered ? 'hovered' : ''}`}
                     type="button"
                     aria-label="Next"
                 >
@@ -93,20 +68,7 @@ function Container(props) {
                     onClick={() => smoothScroll('left')}
                     onMouseEnter={() => setIsHovered1(true)}
                     onMouseLeave={() => setIsHovered1(false)}
-                    style={{
-                        background: '#131515',
-                        borderRadius: 20,
-                        border: '1px solid black',
-                        padding: 20,
-                        flex: '0 0 auto',
-                        position: 'absolute',
-                        left: 30,
-                        top: '50%',
-                        transform: 'translateY(-50%)',
-                        zIndex: 1,
-                        opacity: isHovered1 ? 1 : 0.75,
-                        transition: "opacity .25s ease-in-out"
-                    }}
+                    className={`scroll-button left ${isHovered1 ? 'hovered' : ''}`}
                     type="button"
                     aria-label="Previous"
                 >
@@ -114,7 +76,7 @@ function Container(props) {
                 </button>
             </div>
         </div>
-    )
+    );
 }
 
 export default Container;

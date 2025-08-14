@@ -1,58 +1,64 @@
-import { use, useEffect, useState } from 'react'
-import './App.css'
-import Login from './Login'
-import Card from './card'
-import Container from './container'
-import About from './about'
+import { useState, useEffect, useRef } from "react";
+import About from "./about";
+import Container from "./container";
+import Card from "./card";
+import AutoAlign from "./scroll";
+import Contact from "./contact"
 function App() {
-
-
+  const aboutRef = useRef(null);   // About için ref
+  const cardsRef = useRef(null);   // Cards/Projects için ref
+  const contactRef = useRef(null); // Contact için ref
   const [datas, setdatas] = useState([]);
-  async function getdata() {
-    try {
-      const response = await fetch('/assets/cardtexts.json');
-      const data = await response.json();
-      setdatas(data);
-    } catch (error) {
-      console.log("Veri çekilirken hata:", error);
-    }
-  }
 
- 
   useEffect(() => {
-      getdata();
-  }, [])
-    
-  if (datas.length<=0){
-    return(
-      <div>Loading...</div>
-    )
-  }
-  else{
+    async function getdata() {
+      try {
+        const response = await fetch('/assets/cardtexts.json');
+        const data = await response.json();
+        setdatas(data);
+      } catch (error) {
+        console.log("Veri çekilirken hata:", error);
+      }
+    }
+    getdata();
+  }, []);
 
- 
+  if (datas.length <= 0) return <div>Loading...</div>;
+
   return (
-      <div  >
+    <div>
+      <div ref={aboutRef}>
         <About />
-        <Container>
-          <Card number={datas[0].cardid} header={datas[0].header} title={datas[0].title} img={datas[0].img} />
-          <Card number={datas[1].cardid} header={datas[1].header} title={datas[1].title} img={datas[1].img} />
-          <Card number={datas[2].cardid} header={datas[2].header} title={datas[2].title} img={datas[2].img} />
-          <Card number={datas[3].cardid} header={datas[3].header} title={datas[3].title} img={datas[3].img} />
-          <Card number={datas[4].cardid} header={datas[4].header} title={datas[4].title} img={datas[4].img} />
-          <Card number={datas[5].cardid} header={datas[5].header} title={datas[5].title} img={datas[5].img} />
-          <Card number={datas[3].cardid} header={datas[3].header} title={datas[3].title} img={datas[3].img} />
-          <Card number={datas[4].cardid} header={datas[4].header} title={datas[4].title} img={datas[4].img} />
-          <Card number={datas[5].cardid} header={datas[5].header} title={datas[5].title} img={datas[5].img} />
-       </Container>
       </div>
-  )
-     }
 
+      <div ref={cardsRef}>
+        <Container>
+          {datas.map((item, index) => (
+            <Card
+              key={index}
+              number={item.cardid}
+              header={item.header}
+              title={item.title}
+              img={item.img}
+            />
+          ))}
+        </Container>
+      </div>
+
+      <div ref={contactRef}>
+            <Contact />
+      </div>
+
+      <AutoAlign
+        aboutRef={aboutRef}
+        sections={[
+          { ref: cardsRef },
+          { ref: contactRef },
+        ]}
+        minVisiblePercent={20}
+      />
+    </div>
+  );
 }
 
-
-
-
-export default App
-
+export default App;

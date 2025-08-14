@@ -20,11 +20,15 @@
 /* Firefox */
 html {
   scrollbar-width: none; /* scrollbar'ı gizler */
+  margin: 0;
+  padding: 0;
 }
 
 /* Genel */
 body {
   overflow: auto; /* tekerlek çalışsın */
+  margin: 0;
+  padding: 0;
 }
 
 .pt-sans-regular {
