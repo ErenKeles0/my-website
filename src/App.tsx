@@ -1,11 +1,11 @@
-import './App.css'
-
+import About from './About.tsx'
 function App() {
 
 
   return (
     <>
-      <h1>Hello Vite + React!</h1>
+      <About />
+      <div className="text-white asd">AAAAAAA</div>
     </>
   )
 }
