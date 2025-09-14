@@ -1,13 +1,12 @@
-import About from './About.tsx'
-function App() {
+import './App.css'
+
+export default function App() {
 
 
   return (
     <>
-      <About />
-      <div className="text-white asd">AAAAAAA</div>
+      asdasd
     </>
   )
 }
 
-export default App
