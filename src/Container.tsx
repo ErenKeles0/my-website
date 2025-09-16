@@ -19,7 +19,7 @@ export default function Container({ children }: ContainerProps) {
   
   const totalPages = Math.ceil(children.length / itemsPerPage);
 
-  const containerHeight = window.innerHeight*0.71; // px cinsinden, kartların toplam yüksekliği
+  const containerHeight = window.innerHeight*0.69; // px cinsinden, kartların toplam yüksekliği
 
   const nextPage = () => {
     if (page + 1 < totalPages) setPage(page + 1);
