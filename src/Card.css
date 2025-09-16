@@ -34,7 +34,7 @@
 
 }
 .Cardtitle{
-    font-size: 16pt;
+    font-size: 14pt;
     height: 20vh;
     width: 27vw;
     transition: all 0.3s ease-in-out;
@@ -72,7 +72,7 @@
 
 @media (max-width: 768px) {
   .CardBox {
-    width: 85vw; /* daha geniş, tek kolon */
+    width: 90vw;
   }
 
   .Thumb {
@@ -80,9 +80,10 @@
   }
 
   .Cardtitle {
-    width: 75vw;
+    width: 80vw;
   }
   .GithubButton {
+    margin-top: 0vh;
     width: 10vw;
     border-radius: 2vw;
   }
