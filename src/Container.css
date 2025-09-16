@@ -1,0 +1,43 @@
+@import url("./colors.css");
+
+.container {
+    justify-content:space-around;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+.container-wrapper {
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.container-inner {
+  justify-content:space-around;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: transform 0.6s ease-out;
+}
+
+.nav-button {
+  background-color: var(--color3);
+  color: var(--color6);
+  border: none;
+  box-shadow: 0 0 0.5vw var(--color3);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+.container-header{
+    color:var(--color5);
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    text-shadow: 0 0 0.5vw var(--color4);
+}

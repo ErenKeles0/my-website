@@ -1,0 +1,93 @@
+@import url("./colors.css");
+
+.CardBox{
+    box-shadow: inset 0 0 1vw var(--color4);
+    width: 30vw;
+    height: 65vh;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--color2) ;
+    transition: all 0.3s ease-in-out;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.CardBox:hover {
+    box-shadow: inset 0 0 2vw var(--color4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.Thumb{
+    object-fit: cover;
+    margin-top: 2vh;
+    border-radius:1vw;
+    width:28vw;
+    height: 30vh;
+    transition: all 0.3s ease-in-out;
+}
+.CardHeader{
+    color:var(--color6);
+    height: 1vh;
+    margin-bottom: 3vh;
+
+}
+.Cardtitle{
+    font-size: 16pt;
+    height: 20vh;
+    width: 27vw;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    color:var(--color5);
+    margin-top: 1vh;
+}
+.GithubButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 3vw;
+    height: 5vh;
+    border-radius: 1vw;
+    background-color: var(--color3);
+    color: var(--color6);
+    border: none;
+    box-shadow:  0 0 0.5vw var(--color4);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.GithubButton:hover {
+    box-shadow: 0 0 1vw var(--color4);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.GithubIcon{
+    width: 3vw;
+    height: 3vh;
+}
+
+@media (max-width: 768px) {
+  .CardBox {
+    width: 85vw; /* daha geniş, tek kolon */
+  }
+
+  .Thumb {
+    width: 70vw;
+  }
+
+  .Cardtitle {
+    width: 75vw;
+  }
+  .GithubButton {
+    width: 10vw;
+    border-radius: 2vw;
+  }
+  .GithubIcon {
+    width: 6vw;
+    height: 6vh;
+  }
+}

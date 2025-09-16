@@ -1,0 +1,39 @@
+[
+  {
+    "link": "https://github.com/ErenKeles0/TicTacToe",
+    "thumbnail": "/XOXthumb.png",
+    "header": "Tic Tac Toe",
+    "title": "A basic Tic Tac Toe game on C++ CUI. This game is designed to be simple and easy to use for 2 player. You can play again and again until when you want. "
+  },
+  {
+    "link": "https://github.com/ErenKeles0/Rock-Paper-Scissors",
+    "thumbnail": "/RPSthumb.png",
+    "header": "Rock Paper Scissors",
+    "title": "A basic Rock Paper Scissors game on Python. You can play against the computer. You can choose your move with A S and D keys and play again and again until you want."
+  },
+    {
+    "link": "https://github.com/ErenKeles0/TextToBinary",
+    "thumbnail": "/binaryconverterthumb.png",
+    "header": "Binary Converter",
+    "title": "A simple text to binary and binary to text converter. You can convert any text to binary and binary to text easily with this tool."
+  },
+  {
+    "link": "https://github.com/ErenKeles0/pycalculator",
+    "thumbnail": "/pycalculatorthumb.png",
+    "header": "Python Calculator",
+    "title": "A basic Python calculator with a simple GUI. You can perform basic arithmetic operations and see the results instantly."
+  },
+
+  {
+    "link": "https://github.com/ErenKeles0/Valorant-Instalocker",
+    "thumbnail": "/valorantinstalockaerthumb.png",
+    "header": "Valorant Instalocker",
+    "title": "A Valorant agent instalocker bot that automatically selects your preferred agent when the game starts. With this bot, you can choose what agent you want to play in game at pre-game."
+  },
+  {
+    "link": "https://github.com/ErenKeles0/my-website",
+    "thumbnail": "/thumb.png",
+    "header": "My Website",
+    "title": "This website is my personal portfolio and built with ReactJs. It showcases my projects and skills."
+  }
+]
