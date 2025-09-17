@@ -1,0 +1,57 @@
+@import url("./colors.css");
+
+.space{
+    height: 100vh;
+}
+
+.HiText1{
+
+    color:var(--color9);
+    font-size: 8vw;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    text-shadow: 0 0 2vh var(--color8);
+    
+}
+.HiText2{
+    height: auto;
+    color:var(--color9);
+    font-size: 4vw;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    text-shadow: 0 0 2vh var(--color8);
+}
+.profile-picture{
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 2vh var(--color5);
+}
+.ppdiv{
+
+    text-align: end;
+    
+}
+.AboutContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.texts-container{
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+
+}
+.HiText1c, .HiText2c {
+    height: 40vh;
+    
+}
