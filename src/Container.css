@@ -38,6 +38,6 @@
 .container-header{
     color:var(--color5);
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-shadow: 0 0 0.5vw var(--color4);
 }

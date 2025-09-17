@@ -64,14 +64,13 @@
         margin-top: 5vh;
         margin-bottom: 15vh;
         height: 80dvh;
-    }
+    }   
     .texts-container{
         width: 90vw;
         height: 50vh;
     }
     .HiText1{
-        font-size: 12vw;
-
+        font-size: 28vw;
         text-align: center;
         justify-content: center;
     }
@@ -82,12 +81,13 @@
         
     }
     .HiText1c, .HiText2c {
-        height: auto;
+        height: 40vh;
+        
         
     }
     .ppdiv{
         text-align: center;
-
+        
     }
     .profile-picture{
         width: 50vw;
