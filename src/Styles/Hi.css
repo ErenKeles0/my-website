@@ -4,28 +4,28 @@
 .HiText1{
 
     color:var(--color9);
-    font-size: 8vw;
+    font-size: 8dvw;
     align-items: center;
     justify-content: start;
     text-align: center;
-    text-shadow: 0 0 2vh var(--color8);
+    text-shadow: 0 0 2dvh var(--color8);
     
 }
 .HiText2{
     height: auto;
     color:var(--color9);
-    font-size: 4vw;
+    font-size: 4dvw;
     align-items: center;
     justify-content: start;
     text-align: center;
-    text-shadow: 0 0 2vh var(--color8);
+    text-shadow: 0 0 2dvh var(--color8);
 }
 .profile-picture{
-    width: 20vw;
-    height: 20vw;
+    width: 20dvw;
+    height: 20dvw;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 0 2vh var(--color5);
+    box-shadow: 0 0 2dvh var(--color5);
 }
 .ppdiv{
 
@@ -33,14 +33,14 @@
     
 }
 .HiContainer{
-    height: 90vh;
+    height: 90dvh;
     display: flex;
     flex-direction: row-reverse;
     justify-content:space-around;
     align-items: center;
 }
 .texts-container{
-    width: 60vw;
+    width: 60dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,7 +48,7 @@
 
 }
 .HiText1c, .HiText2c {
-    height: 40vh;
+    height: 40dvh;
     
 }
 
@@ -57,27 +57,27 @@
     .HiContainer{
         flex-direction: column;
         height: auto;
-        margin-top: 5vh;
-        margin-bottom: 15vh;
+        margin-top: 5dvh;
+        margin-bottom: 15dvh;
         height: 80dvh;
     }   
     .texts-container{
-        width: 90vw;
-        height: 50vh;
+        width: 90dvw;
+        height: 50dvh;
     }
     .HiText1{
-        font-size: 28vw;
+        font-size: 28dvw;
         text-align: center;
         justify-content: center;
     }
     .HiText2{
-        font-size: 6vw;
+        font-size: 6dvw;
         text-align: center;
         justify-content: center;
         
     }
     .HiText1c, .HiText2c {
-        height: 40vh;
+        height: 40dvh;
         
         
     }
@@ -86,7 +86,7 @@
         
     }
     .profile-picture{
-        width: 50vw;
-        height: 50vw;
+        width: 50dvw;
+        height: 50dvw;
     }
 }

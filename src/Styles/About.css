@@ -3,7 +3,7 @@
     text-align: start;
     font-size: 4rem;
     text-shadow: 0 0 0.5vw var(--color4);
-    margin-top: 5vh;
+    margin-top: 5dvh;
 
     margin-left: 5vw;
 }
@@ -12,8 +12,8 @@
     text-align: start;
     font-size: 1.5rem!important;
 
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 5dvw;
+    margin-right: 5dvw;
     line-height: 2rem;
 
 }
@@ -22,7 +22,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: 30vh;
+    margin-bottom: 30dvh;
 }
 
 @media (max-width: 768px) {
@@ -34,8 +34,8 @@
     .Aboutme-content {
         font-size: 1rem!important;
         text-align: center;
-        margin-left: 2vw;
-        margin-right: 2vw;
+        margin-left: 2dvw;
+        margin-right: 2dvw;
     }
     .About-container {
         align-items: center;

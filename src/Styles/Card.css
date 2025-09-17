@@ -2,93 +2,93 @@
 
 .CardBox{
     box-shadow: inset 0 0 1vw var(--color4);
-    width: 30vw;
-    height: 65vh;
-    border-radius: 2vw;
+    width: 30dvw;
+    height: 65dvh;
+    border-radius: 2dvw;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color:var(--color2) ;
     transition: all 0.3s ease-in-out;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: 2dvh;
+    margin-bottom: 2dvh;
 }
 .CardBox:hover {
-    box-shadow: inset 0 0 2vw var(--color4);
+    box-shadow: inset 0 0 2dvw var(--color4);
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
 
 .Thumb{
     object-fit: cover;
-    margin-top: 2vh;
-    border-radius:1vw;
-    width:28vw;
-    height: 30vh;
+    margin-top: 2dvh;
+    border-radius:1dvw;
+    width:28dvw;
+    height: 30dvh;
     transition: all 0.3s ease-in-out;
 }
 .CardHeader{
     color:var(--color6);
     height: 1vh;
-    margin-bottom: 3vh;
+    margin-bottom: 3dvh;
 
 }
 .Cardtitle{
     font-size: 14pt;
-    height: 20vh;
+    height: 20dvh;
     width: 27vw;
     transition: all 0.3s ease-in-out;
     text-align: center;
     color:var(--color5);
-    margin-top: 1vh;
+    margin-top: 1dvh;
 }
 .GithubButton{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 3vw;
-    height: 5vh;
-    border-radius: 1vw;
+    margin-top: 2dvh;
+    margin-bottom: 2dvh;
+    width: 3dvw;
+    height: 5dvh;
+    border-radius: 1dvw;
     background-color: var(--color3);
     color: var(--color6);
     border: none;
-    box-shadow:  0 0 0.5vw var(--color4);
+    box-shadow:  0 0 0.5dvw var(--color4);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 .GithubButton:hover {
-    box-shadow: 0 0 1vw var(--color4);
+    box-shadow: 0 0 1dvw var(--color4);
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .GithubIcon{
-    width: 3vw;
-    height: 3vh;
+    width: 3dvw;
+    height: 3dvh;
 }
 
 @media (max-width: 768px) {
   .CardBox {
-    width: 90vw;
+    width: 90dvw;
   }
 
   .Thumb {
-    width: 70vw;
+    width: 70dvw;
   }
 
   .Cardtitle {
-    width: 80vw;
+    width: 80dvw;
   }
   .GithubButton {
     margin-top: 0vh;
-    width: 10vw;
-    border-radius: 2vw;
+    width: 10dvw;
+    border-radius: 2dvw;
   }
   .GithubIcon {
-    width: 6vw;
-    height: 6vh;
+    width: 6dvw;
+    height: 6dvh;
   }
 }
