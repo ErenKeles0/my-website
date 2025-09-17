@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import BlurText from "./BlurText";
-import './About.css';
+import '../Styles/Hi.css';
 
-export default function About() {
+export default function Hi() {
   const [showSecond, setShowSecond] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function About() {
   }, []); // <-- boş array: sadece mountta çalışır
 
   return (
-    <div className="AboutContainer">
+    <div className="HiContainer">
       <div className='ppdiv'>
         <img src="PP.png" className="profile-picture" alt="PP" />
       </div>

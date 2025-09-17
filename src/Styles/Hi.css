@@ -1,8 +1,5 @@
 @import url("./colors.css");
 
-.space{
-    height: 100vh;
-}
 
 .HiText1{
 
@@ -35,13 +32,12 @@
     text-align: end;
     
 }
-.AboutContainer{
-    height: 100vh;
+.HiContainer{
+    height: 90vh;
     display: flex;
     flex-direction: row-reverse;
     justify-content:space-around;
     align-items: center;
-    margin-bottom: 10vh;
 }
 .texts-container{
     width: 60vw;
@@ -58,7 +54,7 @@
 
 @media (max-width: 768px) {
 
-    .AboutContainer{
+    .HiContainer{
         flex-direction: column;
         height: auto;
         margin-top: 5vh;

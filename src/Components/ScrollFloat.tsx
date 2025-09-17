@@ -3,7 +3,7 @@ import type { RefObject, ReactNode } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import './ScrollFloat.css';
+import '../Styles/ScrollFloat.css';
 
 gsap.registerPlugin(ScrollTrigger);
 

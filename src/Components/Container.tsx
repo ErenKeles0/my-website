@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Container.css';
+import '../Styles/Container.css';
 import { FaChevronUp,FaChevronDown} from "react-icons/fa";
 import ScrollFloat from './ScrollFloat';
 

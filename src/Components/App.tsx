@@ -1,9 +1,11 @@
-import './App.css'
+import '../Styles/App.css'
 import Card from './Card'
 import { useEffect, useState } from "react";
 import Container from './Container';
-import About from './About';
+import Hi from './Hi.tsx';
 import LightRays from './LightRays.tsx';
+import About from './About.tsx';
+
 export default function App() {
     type Item = {
       link: string;
@@ -36,7 +38,8 @@ export default function App() {
             className="custom-rays"
         />
       </div>
-    <About />
+    <Hi />
+    <About/>
     <Container>
       {items.map((item, index) => (
         <Card

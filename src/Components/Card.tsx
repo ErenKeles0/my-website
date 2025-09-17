@@ -1,4 +1,4 @@
-import './Card.css'
+import '../Styles/Card.css'
 import { FaGithub } from "react-icons/fa";
 function Card(props:any) {
 
