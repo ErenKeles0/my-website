@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './Container.css';
 import { FaChevronUp,FaChevronDown} from "react-icons/fa";
+import ScrollFloat from './ScrollFloat';
+
+
 interface ContainerProps {
   children: React.ReactNode[];
 }
@@ -31,7 +34,17 @@ export default function Container({ children }: ContainerProps) {
 
   return (
     <div>
-      <h1 className='container-header montserrat-bold'>My Projects</h1>
+      <div className="container-header">
+      <ScrollFloat
+        animationDuration={1}
+        ease='back.inOut(2)'
+        scrollStart='center bottom+=2%'
+        scrollEnd='bottom bottom-=80%'
+        stagger={0.05}
+        textClassName='scrollfloat-text montserrat-bold'
+      >
+      My Projects
+      </ScrollFloat></div>
       <div className="container-wrapper">
         <div
           className="container-inner"

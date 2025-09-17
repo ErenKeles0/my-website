@@ -55,3 +55,42 @@
     height: 40vh;
     
 }
+
+@media (max-width: 768px) {
+
+    .AboutContainer{
+        flex-direction: column;
+        height: auto;
+        margin-top: 5vh;
+        margin-bottom: 15vh;
+        height: 80dvh;
+    }
+    .texts-container{
+        width: 90vw;
+        height: 50vh;
+    }
+    .HiText1{
+        font-size: 12vw;
+
+        text-align: center;
+        justify-content: center;
+    }
+    .HiText2{
+        font-size: 6vw;
+        text-align: center;
+        justify-content: center;
+        
+    }
+    .HiText1c, .HiText2c {
+        height: auto;
+        
+    }
+    .ppdiv{
+        text-align: center;
+
+    }
+    .profile-picture{
+        width: 50vw;
+        height: 50vw;
+    }
+}
