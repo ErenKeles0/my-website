@@ -19,7 +19,7 @@ export default function Hi() {
   return (
     <div className="HiContainer">
       <div className='ppdiv'>
-        <img src="PP.png" className="profile-picture" alt="PP" />
+        <img src="PP.webp" className="profile-picture" alt="PP" />
       </div>
       <div className="texts-container">
         <div className="HiText1c">        
