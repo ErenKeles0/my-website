@@ -192,3 +192,83 @@
 .name, .surname, .email, .message, .subject{
     transition: 0.6s;
 }
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90dvw;
+        height: 85dvh;
+        border-radius: 10dvw;
+    }
+    .contact-main{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .contact-info{
+        border-right: none;
+        border-bottom: 0.5px solid var(--color9);
+        height: auto;
+        width: 80dvw;
+        padding-bottom: 2dvh;
+    }
+    .contact-form{
+        width: 80dvw;
+    }
+    .Emaildiv, .Adressdiv{
+        width: 70dvw;
+        font-size: 3dvw;
+        align-items: center;
+        justify-content: center;
+    }
+    .email-text, .address-text{
+        width: 50dvw;
+        font-size: 4dvw;
+    }
+    .name, .surname{
+        width: 32dvw;
+        font-size: 5dvw;
+
+    }
+    .email, .subject{
+        width: 70dvw;
+        font-size: 4dvw;
+        
+    }
+    .subject{
+        height: 5dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .message{
+        width: 70dvw;
+        height: 25dvh;
+        font-size: 4dvw;
+    }
+    .input-names{
+        width: 70dvw;
+        flex-direction: row;
+        
+    }
+    .submit{
+        width: 20dvw;
+        height: 5dvh;
+        font-size: 4dvw;
+    }
+    .contact-header{
+        margin-top: 2vh;
+        font-size: 8dvw;
+    }
+    .email-icon{
+        position: absolute;
+        left: 20dvw;
+        font-size: 4dvw;
+        margin-right: 1dvw;
+    }
+    .location-icon{
+        position: absolute;
+        font-size: 4dvw;
+        margin-right: 1dvw;
+        left: 20dvw;
+    }
+
+}

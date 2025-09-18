@@ -65,10 +65,10 @@ function Contact() {
               <input placeholder="Surname" type="text" className="surname montserrat-regular" name="user_surname" required />
             </div>
             <input placeholder="Email" type="email" className="email montserrat-regular" name="user_email" required />
-            <textarea placeholder="Subject" name="subject" className="subject montserrat-regular" required />
+            <input placeholder="Subject" name="subject" className="subject montserrat-regular" required />
             <textarea placeholder="Message" className="message montserrat-regular" name="message" required />
 
-            <button type="submit" className="submit" disabled={loading}>
+            <button type="submit" className="submit montserrat-regular" disabled={loading}>
               {loading ? "Gönderiliyor..." : "Send"}
             </button>
           </form>
