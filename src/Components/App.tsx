@@ -6,14 +6,15 @@ import Hi from './Hi.tsx';
 import LightRays from './LightRays.tsx';
 import About from './About.tsx';
 import Contact from './Contact.tsx';
+import Scroll from './Scroll.tsx';
 
 export default function App() {
-    type Item = {
-      link: string;
-      title: string;
-      header: string;
-      thumbnail: string;
-    };
+  type Item = {
+    link: string;
+    title: string;
+    header: string;
+    thumbnail: string;
+  };
 
   const [items, setItems] = useState<Item[]>([]);
 
@@ -22,12 +23,14 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
-  
+
   return (
     <>
-      
-        <div className='Rayscontainer' >
-          <LightRays
+
+      <Scroll />
+
+      <div className='Rayscontainer'>
+        <LightRays
           raysOrigin="top-center"
           raysColor="#adb5bd"
           raysSpeed={0.5}
@@ -38,28 +41,34 @@ export default function App() {
           noiseAmount={0.1}
           distortion={0.05}
           className="custom-rays"
-          />
-        </div>
-          <Hi />
-          <About/>
-          <Container>
-        {items.map((item, index) => (
-          <Card
-            key={index}
-            link={item.link}
-            title={item.title}
-            header={item.header}
-            image={item.thumbnail}
-          />  
-        ))}
-          </Container>
-      
-    <Contact />
+        />
+      </div>
 
-    
-    
-    
+      <section style={{ height: "100vh" }}>
+        <Hi />
+      </section>
+
+      <section style={{ height: "100vh" }}>
+        <About />
+      </section>
+
+      <section style={{ minHeight: "100vh" }}>
+        <Container>
+          {items.map((item, index) => (
+            <Card
+              key={index}
+              link={item.link}
+              title={item.title}
+              header={item.header}
+              image={item.thumbnail}
+            />
+          ))}
+        </Container>
+      </section>
+
+      <section style={{ height: "100vh" }}>
+        <Contact />
+      </section>
     </>
-    
-  )
+  );
 }

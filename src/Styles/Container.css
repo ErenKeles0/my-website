@@ -31,11 +31,13 @@
   box-shadow: 0 0 0.5vw var(--color3);
   cursor: pointer;
   padding: 0.5rem 1rem;
-  margin: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   border-radius: 0.5rem;
   z-index: 1;
 }
 .container-header{
+    position: relative;
     color:var(--color5);
     text-align: center;
     font-size: 2rem;

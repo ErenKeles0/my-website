@@ -1,92 +1,124 @@
 @import url("./colors.css");
 
+* {
+    box-sizing: border-box;
+}
 
-.HiText1{
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
 
-    color:var(--color9);
-    font-size: 8dvw;
-    align-items: center;
-    justify-content: start;
-    text-align: center;
-    text-shadow: 0 0 2dvh var(--color8);
-    
-}
-.HiText2{
-    height: auto;
-    color:var(--color9);
-    font-size: 4dvw;
-    align-items: center;
-    justify-content: start;
-    text-align: center;
-    text-shadow: 0 0 2dvh var(--color8);
-}
-.profile-picture{
-    width: 20dvw;
-    height: 20dvw;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 0 2dvh var(--color5);
-}
-.ppdiv{
-
-    text-align: end;
-    
-}
-.HiContainer{
+.HiContainer {
     height: 90dvh;
     display: flex;
     flex-direction: row-reverse;
-    justify-content:space-around;
+    justify-content: space-between;
     align-items: center;
+    width: 100dvw;
+    max-width: 100dvw;
+    overflow-x: hidden;
+    padding: 0 5dvw;
 }
-.texts-container{
-    width: 60dvw;
+
+.texts-container {
+    width: 55dvw;
+    max-width: 55dvw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: auto;
-
 }
+
+.HiText1, .HiText2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 2dvh var(--color8);
+}
+
+.HiText1 {
+    color: var(--color9);
+    font-size: 10dvw; /* biraz büyütüldü */
+    line-height: 1.1;
+}
+
+.HiText2 {
+    color: var(--color9);
+    font-size: 5dvw;
+    white-space: nowrap; /* tek satır */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .HiText1c, .HiText2c {
     height: 40dvh;
-    
+}
+
+.profile-picture {
+    width: 20dvw;
+    max-width: 20dvw;
+    height: 20dvw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 2dvh var(--color5);
+    align-self: center; /* container içinde ortala */
+    margin-top: 5dvh; /* biraz aşağı çekildi */
+}
+
+.ppdiv {
+    text-align: center;
 }
 
 @media (max-width: 768px) {
-
-    .HiContainer{
+    .HiContainer {
         flex-direction: column;
+        width: 100dvw;
+        max-width: 100dvw;
         height: auto;
-        margin-top: 5dvh;
-        margin-bottom: 15dvh;
-        height: 80dvh;
+        margin: 0;
+        padding: 0 5dvw;
+        overflow-x: hidden;
+        justify-content: center;
+        align-items: center;
     }   
-    .texts-container{
-        width: 90dvw;
-        height: 50dvh;
+
+    .texts-container {
+        width: 90%;
+        max-width: 90dvw;
+        height: auto;
     }
-    .HiText1{
-        font-size: 28dvw;
+
+    .HiText1 {
+        font-size: clamp(12dvw, 22vw, 30dvw); /* biraz daha büyütüldü */
         text-align: center;
         justify-content: center;
     }
-    .HiText2{
-        font-size: 6dvw;
+
+    .HiText2 {
+        height: 20vh;
+        width: 80dvw;
+        font-size: 5dvh;
         text-align: center;
         justify-content: center;
-        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
     .HiText1c, .HiText2c {
-        height: 40dvh;
-        
-        
+        height: 30dvh;
     }
-    .ppdiv{
+
+    .ppdiv {
         text-align: center;
-        
     }
-    .profile-picture{
-        width: 50dvw;
-        height: 50dvw;
+
+    .profile-picture {
+        width: 40dvw;
+        max-width: 50dvw;
+        height: auto;
+        margin-top: 7dvh; /* biraz daha aşağıya çekildi */
     }
 }

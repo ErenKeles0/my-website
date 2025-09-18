@@ -21,7 +21,7 @@ function About() {
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
-        baseRotation={10}
+        baseRotation={7}
         blurStrength={5}
         textClassName='Aboutme-content'
       >

@@ -32,6 +32,7 @@
   font-style: normal;
 }
 body {
+  width: 100dvw;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -46,4 +47,38 @@ body {
     height: 100%;
     pointer-events: none; 
     z-index: -1;          
+}
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}   
+
+.scroll-button {
+  position: fixed;
+  bottom: calc(2.5dvh + env(safe-area-inset-bottom)); /* 20px yerine 2.5dvh */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.2dvh 2.5dvw; /* mobil uyumlu padding */
+  background: none;
+  color: white;
+  border-radius: 1dvh;
+  cursor: pointer;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+.scroll-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Küçük ekranlarda biraz daha yukarı */
+@media (max-width: 768px) {
+  .scroll-button {
+    bottom: 6dvh;
   }
+}
