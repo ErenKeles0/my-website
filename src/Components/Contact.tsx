@@ -20,7 +20,7 @@ function Contact() {
 
     const emailParams = {
       user_name: `<strong>${fullName}</strong>`,  // Ad + Soyad kalın
-      user_email: formData.get("user_email"),
+      email: formData.get("user_email"),
       title: title,                               // Başlık
       subject: `${title} - ${fullName}`,         // Mail konusu
       message: formData.get("message"),
